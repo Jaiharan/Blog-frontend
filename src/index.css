@@ -12,9 +12,23 @@ img{
 
 @layer components{
   .post-style{
-    @apply grid grid-cols-2 gap-4 pb-7
+    @apply grid grid-cols-2 gap-4 pb-7 p-6
   }
   .post-headline{
     @apply no-underline text-inherit font-bold text-3xl
   }
+  input{
+    @apply block mb-2 w-full p-1 border-gray-400 rounded bg-slate-300
+  }
+  button{
+    @apply w-full block bg-blue-600 border-0 text-gray-50 rounded p-2
+  }
+  h1{
+    @apply text-4xl pb-4 text-center font-bold
+  }
+}
+
+form.login , form.register{
+  max-width: 400px;
+  margin: 0 auto;
 }
