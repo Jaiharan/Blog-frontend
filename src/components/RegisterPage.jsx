@@ -27,11 +27,14 @@ const RegisterPage = () => {
               placeholder='username' 
               value={username} 
               onChange={(e) => setUsername(e.target.value)}
+              required
               />
       <input type="password"
               placeholder='password'
               value={password}
-              onChange={(e) => setPassword(e.target.value)}/>
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              />
       <button>Register</button>
     </form>
   )
