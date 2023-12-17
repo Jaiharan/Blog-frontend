@@ -25,8 +25,8 @@ const Header = () => {
 
   const username = userInfo?.username;
   return (
-    <header className='flex justify-between mb-12 p-6 m-0'>
-        <Link to='/' className='Logo no-underline text-inherit font-bold text-3xl'>MyBlog</Link>
+    <header className='flex justify-between mb-6 p-6 m-0'>
+        <Link to='/' className='Logo no-underline text-inherit ml-6 font-bold text-3xl text-gray-800 shadow-md'>MyBlog</Link>
         <nav className='flex gap-4'>
           {username && (
             <>

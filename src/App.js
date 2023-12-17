@@ -8,6 +8,8 @@ import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import { UserContextProvider } from './components/UserContext';
 import CreatePost from './components/CreatePost';
+import NotFound from './components/NotFound';
+import PostPage from './components/Postpage';
 
 function App() {
   return (
@@ -18,7 +20,9 @@ function App() {
           <Route path='/login' element={<LoginPage/>}/>
           <Route path='/register' element={<RegisterPage/>}/>
           <Route path='/create' element={<CreatePost/>}/>
+          <Route path='/post/:id' element={<PostPage/>}/>
         </Route>
+        <Route path='*' element={<NotFound />}/>
       </Routes>
     </UserContextProvider>
   );
