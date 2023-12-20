@@ -25,19 +25,19 @@ const Header = () => {
 
   const username = userInfo?.username;
   return (
-    <header className='flex justify-between mb-6 p-6 m-0'>
-        <Link to='/' className='Logo no-underline text-inherit ml-6 font-bold text-3xl text-gray-800 shadow-md'>MyBlog</Link>
+    <header className='flex justify-between mb-6 p-6 pl-3 pr-3 m-0'>
+        <Link to='/' className='Logo no-underline text-inherit font-bold text-3xl text-gray-800 neon transition-all'>MyBlog</Link>
         <nav className='flex gap-4'>
           {username && (
             <>
-              <Link to="/create" className='hover:font-bold transition-all'>Create new post</Link>
-              <a onClick={logout} className=' cursor-pointer hover:font-bold transition-all'>Logout</a>
+              <Link to="/create" className='hover:font-bold neon transition-all flex items-center'>Create new post</Link>
+              <a onClick={logout} className=' cursor-pointer hover:font-bold neon transition-all flex items-center'>Logout</a>
             </>
           )}
           {!username && (
             <>
-              <Link to="/login" className='hover:font-bold transition-all'>Login</Link>
-              <Link to="/register" className='hover:font-bold transition-all'>Register</Link>
+              <Link to="/login" className='hover:font-bold neon transition-all flex items-center'>Login</Link>
+              <Link to="/register" className='hover:font-bold neon transition-all flex items-center'>Register</Link>
             </>
           )}
           
