@@ -19,7 +19,7 @@ export default function PostPage(_id,title,summary, cover,content,createdAt,auth
     })
   },[]);
 
-  if(!postInfo) return '';
+  if(!postInfo) return 'Unable to connect server';
 
   return(
     <div className="postpage">

@@ -7,6 +7,10 @@ body{
   background-color: rgb(12, 11, 11);
 }
 
+:root{
+  cursor: default;
+}
+
 ::selection{
   color: black;
   background-color: orange;
@@ -14,6 +18,10 @@ body{
 
 img{
   max-width: 100%;
+}
+
+img:hover{
+  box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
 }
 
 @media only screen and (min-width: 1000px) {

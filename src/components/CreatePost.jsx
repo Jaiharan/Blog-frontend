@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import ReactQuill from 'react-quill';
 import {Navigate} from 'react-router-dom'
 import 'react-quill/dist/quill.snow.css';
+import Editor from './Editor';
 
 const  modules = {
   toolbar: [
@@ -50,7 +50,7 @@ export default function CreatePost(){
       <input type="title" placeholder={'Title'} value={title} onChange={e => setTitle(e.target.value)} />
       <input type="summary" placeholder={'Summary'} value={summary} onChange={e => setSummary(e.target.value)}/>
       <input type="file" onChange={e => setFiles(e.target.files)}/>
-      <ReactQuill value={content} onChange={newValue => setContent(newValue)} modules={modules} formats={formats}/>
+      <Editor value={content} onChange={setContent}/>
       <button className=' mt-2 bg-neutral-600'>Create Post</button>
     </form>
   )
