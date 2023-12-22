@@ -25,11 +25,12 @@ const Header = () => {
 
   const username = userInfo?.username;
   return (
-    <header className='flex justify-between mb-6 p-6 pl-3 pr-3 m-0'>
-        <Link to='/' className='Logo no-underline text-inherit font-bold text-3xl text-gray-800 neon transition-all'>MyBlog</Link>
-        <nav className='flex gap-4'>
+    <header className='flex justify-between mb-6 p-6 pl-3 pr-3 m-0 gap-2'>
+        <Link to='/' className='Logo no-underline text-inherit font-bold text-3xl text-gray-800 neon transition-all'>InaMinute</Link>
+        <nav className='flex gap-4 sm:text-xs'>
           {username && (
             <>
+              <Link to="https://www.buymeacoffee.com/jaiharan007" className='hover:font-bold neon transition-all flex items-center'>Donate😉</Link>
               <Link to="/create" className='hover:font-bold neon transition-all flex items-center'>Create new post</Link>
               <a onClick={logout} className=' cursor-pointer hover:font-bold neon transition-all flex items-center'>Logout</a>
             </>
