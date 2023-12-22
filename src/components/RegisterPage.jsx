@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
+import { Navigate } from 'react-router-dom';
 
 const RegisterPage = () => {
 
   const [username,setUsername] = useState('');
   const [password,setPassword] = useState('');
+  const [redirect,setRedirect] = useState(false);
 
   async function register(e){
     e.preventDefault();
@@ -15,9 +17,14 @@ const RegisterPage = () => {
     if(response.status !== 200){
       alert('Registration Failed')
     }else{
-      alert('Registration Successfull')
+      setRedirect(true);
+      alert('Registration Successfull & Please login to continue...')
     }
     
+  }
+
+  if(redirect){
+    return <Navigate to={'/login'}/>
   }
 
   return (
