@@ -22,6 +22,13 @@ const Header = () => {
     })
     setUserInfo(null);
   }
+  const openNewTab = () => {
+    // Specify the URL you want to open in the new tab
+    const url = 'https://www.buymeacoffee.com/jaiharan007';
+
+    // Open a new tab or window with the specified URL
+    window.open(url, '_blank');
+  };
 
   const username = userInfo?.username;
   return (
@@ -30,7 +37,7 @@ const Header = () => {
         <nav className='flex gap-4 sm:text-xs'>
           {username && (
             <>
-              <Link to="https://www.buymeacoffee.com/jaiharan007" className='hover:font-bold neon transition-all flex items-center'>Donate😉</Link>
+              <a onClick={openNewTab} className='hover:font-bold neon transition-all flex items-center'>Donate☕</a>
               <Link to="/create" className='hover:font-bold neon transition-all flex items-center'>Create new post</Link>
               <a onClick={logout} className=' cursor-pointer hover:font-bold neon transition-all flex items-center'>Logout</a>
             </>

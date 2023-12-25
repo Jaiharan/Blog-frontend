@@ -1,9 +1,33 @@
 import { formatISO9075 } from 'date-fns';
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
 const Post = ({_id,title,summary, cover,content,createdAt,author}) => {
+  // Add this if u need scroll effect
+//   useEffect(() => {
+//   const handleScroll = () => {
+//     const reveals = document.querySelectorAll('.reveal');
+
+//     reveals.forEach((element) => {
+//       const windowheight = window.innerHeight;
+//       const revealtop = element.getBoundingClientRect().top;
+//       const revealpoint = 150;
+
+//       if (revealtop < windowheight - revealpoint) {
+//         element.classList.add('active');
+//       } else {
+//         element.classList.remove('active');
+//       }
+//     });
+//   };
+//   window.addEventListener('scroll', handleScroll);
+//   return () => {
+//     window.removeEventListener('scroll', handleScroll);
+//   };
+// }, []);
+
   return (
     <div className="post ">
       <div className='post-style md:grid-cols-1 sm:grid-cols-1 ml-2'>
