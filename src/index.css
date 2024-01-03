@@ -7,6 +7,10 @@ body{
   background-color: rgb(12, 11, 11);
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 :root{
   cursor: default;
 }
